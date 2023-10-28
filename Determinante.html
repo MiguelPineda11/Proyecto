@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Determinante de una Matriz</title>
+    <script>
+        function determinantedeMatriz() 
+        {
+            // Obtener los valores de los numeros de la matriz desde los campos de entrada
+            var a1 = parseFloat(document.getElementById("a1").value);
+            var b1 = parseFloat(document.getElementById("b1").value);
+            var c1 = parseFloat(document.getElementById("c1").value);
+            var d1 = parseFloat(document.getElementById("d1").value);
+            var e1 = parseFloat(document.getElementById("e1").value);
+            var f1 = parseFloat(document.getElementById("f1").value);
+            var g1 = parseFloat(document.getElementById("g1").value);
+            var h1 = parseFloat(document.getElementById("h1").value);  
+            var i1 = parseFloat(document.getElementById("i1").value);
+
+            // Buscar la determinante de la matriz
+            var resultado1 = (a1 * e1 * i1); 
+            var resultado2 = (b1 * f1 * g1);
+            var resultado3 = (d1 * h1 * c1);
+            var resultado4 = (c1 * e1 * g1);
+            var resultado5 = (b1 * d1 * i1);
+            var resultado6 = (f1 * h1 * a1); 
+            var resultado7 = (resultado1 + resultado2 + resultado3);
+            var resultado8 = -(resultado4 + resultado5 + resultado6);
+            var resultado9 = (resultado7 + resultado8);
+
+
+            // Mostrar el resultado en el campo de salida
+            document.getElementById("determinante").innerHTML = "<h1>|A|:<h/1>" + resultado9 + ""
+        }
+    </script>
+</head>
+<body>
+    <h1>Determinante de Matriz</h1>
+    <p>Ingresa los numeros de la matriz:</p>
+    <div>
+        <h2>Matriz A:</h2>
+    </div>
+    <input type="number" id="a1" placeholder="a1">
+    <input type="number" id="b1" placeholder="b1">
+    <input type="number" id="c1" placeholder="c1"><br>
+    <input type="number" id="d1" placeholder="d1">
+    <input type="number" id="e1" placeholder="e1">
+    <input type="number" id="f1" placeholder="f1"><br>
+    <input type="number" id="g1" placeholder="g1">
+    <input type="number" id="h1" placeholder="h1">
+    <input type="number" id="i1" placeholder="i1"><br>
+    <div>
+    <button onclick="determinantedeMatriz()">Determinante de Matriz</button>
+    <p id="determinante"></p>
+
+    <button>
+        <a class="btn1" href="index.html">Regresar</a>
+    </button> 
+</body>
+</html>

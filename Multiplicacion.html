@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplicacion de Vectores</title>
+    <script>
+        function multiplicarVectores() 
+        {
+            // Obtener los valores de los componentes de los vectores desde los campos de entrada
+            var a1 = parseFloat(document.getElementById("a1").value);
+            var b1 = parseFloat(document.getElementById("b1").value);
+            var c1 = parseFloat(document.getElementById("c1").value);
+            var d1 = parseFloat(document.getElementById("d1").value);
+            var e1 = parseFloat(document.getElementById("e1").value);
+            var f1 = parseFloat(document.getElementById("f1").value);
+            var g1 = parseFloat(document.getElementById("g1").value);
+            var h1 = parseFloat(document.getElementById("h1").value);  
+            var i1 = parseFloat(document.getElementById("i1").value);
+
+            var a2 = parseFloat(document.getElementById("a2").value);
+            var b2 = parseFloat(document.getElementById("b2").value);
+            var c2 = parseFloat(document.getElementById("c2").value);
+            var d2 = parseFloat(document.getElementById("d2").value);
+            var e2 = parseFloat(document.getElementById("e2").value);
+            var f2 = parseFloat(document.getElementById("f2").value);
+            var g2 = parseFloat(document.getElementById("g2").value);
+            var h2 = parseFloat(document.getElementById("h2").value);  
+            var i2 = parseFloat(document.getElementById("i2").value);
+
+            // Realizar la multiplicacion de vectores
+            var resultadoA = [(a1 * a2) + (b1 * d2) + (c1 * g2)];
+            var resultadoB = [(a1 * b2) + (b1 * e2) + (c1 * h2)];
+            var resultadoC = [(a1 * c2) + (b1 * f2) + (c1 * i2)];
+            var resultadoD = [(d1 * a2) + (e1 * d2) + (f1 * g2)];
+            var resultadoE = [(d1 * b2) + (e1 * e2) + (f1 * h2)];
+            var resultadoF = [(d1 * c2) + (e1 * f2) + (f1 * i2)];
+            var resultadoG = [(g1 * a2) + (h1 * d2) + (i1 * g2)];
+            var resultadoH = [(g1 * b2) + (h1 * e2) + (i1 * h2)];
+            var resultadoI = [(g1 * c2) + (h1 * f2) + (i1 * i2)];
+
+            // Mostrar el resultado en el campo de salida
+            document.getElementById("resultado").innerHTML = "<h1>Resultado:<h/1> <br><h2>" + resultadoA + "  ,  " + resultadoB + "  ,  " + resultadoC + " <br> " + resultadoD + "  ,  " + resultadoE + "  ,  " + resultadoF + " <br> " + resultadoG + "  ,  " + resultadoH + "  ,  " + resultadoI + "<h/2> "
+        }
+    </script>
+</head>
+<body>
+    <h1>Multiplicacion de Vectores</h1>
+    <p>Ingresa los numeros de las matrices:</p>
+    <div>
+        <h2>Matriz A:</h2>
+    </div>
+    <input type="number" id="a1" placeholder="a1">
+    <input type="number" id="b1" placeholder="b1">
+    <input type="number" id="c1" placeholder="c1"><br>
+    <input type="number" id="d1" placeholder="d1">
+    <input type="number" id="e1" placeholder="e1">
+    <input type="number" id="f1" placeholder="f1"><br>
+    <input type="number" id="g1" placeholder="g1">
+    <input type="number" id="h1" placeholder="h1">
+    <input type="number" id="i1" placeholder="i1">
+    <br>
+    <div>
+        <h2>Matriz B:</h2>
+    </div>
+    <input type="number" id="a2" placeholder="a2">
+    <input type="number" id="b2" placeholder="b2">
+    <input type="number" id="c2" placeholder="c2"><br>
+    <input type="number" id="d2" placeholder="d2">
+    <input type="number" id="e2" placeholder="e2">
+    <input type="number" id="f2" placeholder="f2"><br>
+    <input type="number" id="g2" placeholder="g2">
+    <input type="number" id="h2" placeholder="h2">
+    <input type="number" id="i2" placeholder="i2">
+    <br>
+    <button onclick="multiplicarVectores()">Multiplicar Vectores</button>
+    <p id="resultado"></p>
+
+    <button>
+        <a class="btn1" href="index.html">Regresar</a>
+    </button> 
+</body>
+</html>

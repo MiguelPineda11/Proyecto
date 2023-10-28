@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma de Vectores</title>
+    <script>
+        function sumarVectores() {
+            // Obtener los valores de los componentes de los vectores desde los campos de entrada
+            var x1 = parseFloat(document.getElementById("x1").value);
+            var y1 = parseFloat(document.getElementById("y1").value);
+            var z1 = parseFloat(document.getElementById("z1").value);
+            
+            var x2 = parseFloat(document.getElementById("x2").value);
+            var y2 = parseFloat(document.getElementById("y2").value);
+            var z2 = parseFloat(document.getElementById("z2").value);
+            
+            // Realizar la suma de vectores
+            var resultadoX = x1 + x2;
+            var resultadoY = y1 + y2;
+            var resultadoZ = z1 + z2;
+            
+            // Mostrar el resultado en el campo de salida
+            document.getElementById("resultado").innerHTML = "Resultado: (" + resultadoX + ", " + resultadoY + ", " + resultadoZ + ")";
+        }
+    </script>
+</head>
+<body>
+    <h1>Suma de Vectores en 3D</h1>
+    <p>Ingresa los componentes de los vectores:</p>
+    <label>Vector 1:</label>
+    <input type="number" id="x1" placeholder="x1">
+    <input type="number" id="y1" placeholder="y1">
+    <input type="number" id="z1" placeholder="z1">
+    <br>
+    <label>Vector 2:</label>
+    <input type="number" id="x2" placeholder="x2">
+    <input type="number" id="y2" placeholder="y2">
+    <input type="number" id="z2" placeholder="z2">
+    <br>
+    <button onclick="sumarVectores()">Sumar Vectores</button>
+    <p id="resultado"></p>
+
+    <button>
+        <a class="btn1" href="index.html">Regresar</a>
+    </button> 
+</body>
+</html>
